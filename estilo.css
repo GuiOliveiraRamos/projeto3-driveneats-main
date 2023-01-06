@@ -187,8 +187,23 @@ button {
 .chosen2,
 .chosen3 {
     border: 4px #32B72F solid;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.order {
+    background-color: #32B72F;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50px;
+    width: 364px;
+    height: 61px;
+    border: none;
 }
