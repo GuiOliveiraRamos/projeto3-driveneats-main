@@ -25,28 +25,28 @@
         </p>
     </div>
     <div class="pratos">
-        <div class="comidas1" onclick="selecionarComida('.comidas1')">
+        <div class="comidas1" onclick="selecionarComida('.comidas1')" data-test="dish">
             <img src="./Imagens/frango_yin_yang 1.jpg" alt="">
             <div class="inside">
-                <h1>Frango Yin Yang</h1>
+                <h1 data-test="item-name">Frango Yin Yang</h1>
                 <h2>Um pouco de batata,<br> um pouco de salada</h2>
-                <h3>R$ 14,90</h3>
+                <h3 data-test="price">R$ 14,90</h3>
             </div>
         </div>
-        <div class="comidas2" onclick="selecionarComida('.comidas2')">
+        <div class="comidas2" onclick="selecionarComida('.comidas2')" data-test="dish">
             <img src="./Imagens/frango_yin_yang 1.jpg" alt="">
             <div class="inside">
-                <h1>Frango Yin Yang</h1>
+                <h1 data-test="item-name">Frango Yin Yang</h1>
                 <h2>Um pouco de batata,<br> um pouco de salada</h2>
-                <h3>R$ 13,90</h3>
+                <h3 data-test="price">R$ 13,90</h3>
             </div>
         </div>
-        <div class="comidas3" onclick="selecionarComida('.comidas3')">
+        <div class="comidas3" onclick="selecionarComida('.comidas3')" data-test="dish">
             <img src="./Imagens/frango_yin_yang 1.jpg" alt="">
             <div class="inside">
-                <h1>Frango Yin Yang</h1>
+                <h1 data-test="item-name">Frango Yin Yang</h1>
                 <h2>Um pouco de batata,<br> um pouco de salada</h2>
-                <h3>R$ 12,90</h3>
+                <h3 data-test="price">R$ 12,90</h3>
             </div>
         </div>
     </div>
@@ -56,28 +56,28 @@
         </p>
     </div>
     <div class="pratos">
-        <div class="bebidas1" onclick="selecionarBebida('.bebidas1')">
+        <div class="bebidas1" onclick="selecionarBebida('.bebidas1')" data-test="drink">
             <img src="./Imagens/coquinha_gelada 1.jpg" alt="">
             <div class="inside">
-                <h1>Coquinha Gelada</h1>
+                <h1 data-test="item-name">Coquinha Gelada</h1>
                 <h2>Lata 350ml</h2>
-                <h3>R$ 4,90</h3>
+                <h3 data-test="price">R$ 4,90</h3>
             </div>
         </div>
-        <div class="bebidas2" onclick="selecionarBebida('.bebidas2')">
+        <div class="bebidas2" onclick="selecionarBebida('.bebidas2')" data-test="drink">
             <img src="./Imagens/coquinha_gelada 1.jpg" alt="">
             <div class="inside">
-                <h1>Coquinha Gelada</h1>
+                <h1 data-test="item-name">Coquinha Gelada</h1>
                 <h2>Lata 350ml</h2>
-                <h3>R$ 3,90</h3>
+                <h3 data-test="price">R$ 3,90</h3>
             </div>
         </div>
-        <div class="bebidas3" onclick="selecionarBebida('.bebidas3')">
+        <div class="bebidas3" onclick="selecionarBebida('.bebidas3')" data-test="drink">
             <img src="./Imagens/coquinha_gelada 1.jpg" alt="">
             <div class="inside">
-                <h1>Coquinha Gelada</h1>
+                <h1 data-test="item-name">Coquinha Gelada</h1>
                 <h2>Lata 350ml</h2>
-                <h3>R$ 5,90</h3>
+                <h3 data-test="price">R$ 5,90</h3>
             </div>
         </div>
     </div>
@@ -87,33 +87,34 @@
         </p>
     </div>
     <div class="pratos-sobremesas">
-        <div class="sobremesas1" onclick="selecionarSobremesa('.sobremesas1')">
+        <div class="sobremesas1" onclick="selecionarSobremesa('.sobremesas1')" data-test="dessert">
             <img src="./Imagens/pudim 1.jpg" alt="">
             <div class="inside">
-                <h1>Pudim</h1>
+                <h1 data-test="item-name">Pudim</h1>
                 <h2>Apenas pudim</h2>
-                <h3>R$ 7,90</h3>
+                <h3 data-test="price">R$ 7,90</h3>
             </div>
         </div>
-        <div class="sobremesas2" onclick="selecionarSobremesa('.sobremesas2')">
+        <div class="sobremesas2" onclick="selecionarSobremesa('.sobremesas2')" data-test="dessert">
             <img src="./Imagens/pudim 1.jpg" alt="">
             <div class="inside">
-                <h1>Pudim</h1>
+                <h1 data-test="item-name">Pudim</h1>
                 <h2>Apenas pudim</h2>
-                <h3>R$ 6,90</h3>
+                <h3 data-test="price">R$ 6,90</h3>
             </div>
         </div>
-        <div class="sobremesas3" onclick="selecionarSobremesa('.sobremesas3')">
+        <div class="sobremesas3" onclick="selecionarSobremesa('.sobremesas3')" data-test="dessert">
             <img src="./Imagens/pudim 1.jpg" alt="">
             <div class="inside">
-                <h1>Pudim</h1>
+                <h1 data-test="item-name">Pudim</h1>
                 <h2>Apenas pudim</h2>
-                <h3>R$ 5,90</h3>
+                <h3 data-test="price">R$ 5,90</h3>
             </div>
         </div>
     </div>
     <div class="bottom-bar">
-        <button class="finishing" onclick="finalizarPedido('.finishing')">Selecione os 3 itens <br> para fechar o
+        <button class="finishing" onclick="finalizarPedido('.finishing')" data-test="order-btn">Selecione os 3 itens
+            <br> para fechar o
             pedido
         </button>
     </div>
