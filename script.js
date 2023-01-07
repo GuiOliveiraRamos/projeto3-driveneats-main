@@ -1,4 +1,6 @@
-function selecionarComida(botaoClicado) {
+let comidaEscolhida;
+
+function selecionarComida(comidaClicada) {
 
     const comidaSelecionadaAntes = document.querySelector('.chosen1');
 
@@ -7,13 +9,19 @@ function selecionarComida(botaoClicado) {
         comidaSelecionadaAntes.classList.remove('chosen1');
     }
 
-    const botao = document.querySelector(botaoClicado);
+    const botao1 = document.querySelector(comidaClicada);
 
-    botao.classList.add('chosen1');
+    botao1.classList.add('chosen1');
+
+    comidaEscolhida = botao1.innerHTML;
+
+    verificarSelecoes();
+
 }
 
+let bebidaEscolhida;
 
-function selecionarBebida(botaoClicado) {
+function selecionarBebida(bebidaClicada) {
 
     const bebidaSelecionadaAntes = document.querySelector('.chosen2');
 
@@ -22,13 +30,18 @@ function selecionarBebida(botaoClicado) {
         bebidaSelecionadaAntes.classList.remove('chosen2');
     }
 
-    const botao = document.querySelector(botaoClicado);
+    const botao2 = document.querySelector(bebidaClicada);
 
-    botao.classList.add('chosen2');
+    botao2.classList.add('chosen2');
+
+    bebidaEscolhida = botao2.innerHTML;
+
+    verificarSelecoes();
 }
 
+let sobremesaEscolhida;
 
-function selecionarSobremesa(botaoClicado) {
+function selecionarSobremesa(sobremesaClicada) {
 
     const sobremesaSelecionadaAntes = document.querySelector('.chosen3');
 
@@ -37,24 +50,32 @@ function selecionarSobremesa(botaoClicado) {
         sobremesaSelecionadaAntes.classList.remove('chosen3');
     }
 
-    const botao = document.querySelector(botaoClicado);
+    const botao3 = document.querySelector(sobremesaClicada);
 
-    botao.classList.add('chosen3');
+    botao3.classList.add('chosen3');
+
+    sobremesaEscolhida = botao3.innerHTML;
+
+    verificarSelecoes();
+
 }
-function finalizarPedido() {
 
-    const botao = document.querySelector('.finishing');
+function verificarSelecoes() {
 
-    let chosen1 = document.querySelector(".chosen1");
-    let chosen2 = document.querySelector(".chosen2");
-    let chosen3 = document.querySelector(".chosen3");
+    if (comidaEscolhida !== undefined) {
 
-    if (chosen1 !== null && chosen2 !== null && chosen3 !== null) {
+        if (bebidaEscolhida !== undefined) {
 
-        botao.classList.add('order');
-        botao.innerHTML = "Fazer Pedido";
+            if (sobremesaEscolhida !== undefined) {
+
+                const fecharPedido = document.querySelector('.finishing');
+                fecharPedido.classList.add('order');
+                const finalizar = document.querySelector('.finishing');
+                finalizar.innerHTML = "Fazer Pedido";
+
+            }
+        }
 
     }
-
 
 }
