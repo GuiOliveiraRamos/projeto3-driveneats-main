@@ -1,3 +1,15 @@
+img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
+.bebidas1 img,
+.bebidas2 img,
+.bebidas3 img {
+    width: 90px;
+}
+
 a {
     text-decoration: none;
 }
