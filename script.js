@@ -1,5 +1,6 @@
 let comidaEscolhida;
-
+let titleComida;
+let priceComida;
 function selecionarComida(comidaClicada) {
 
     const comidaSelecionadaAntes = document.querySelector('.chosen1');
@@ -15,12 +16,19 @@ function selecionarComida(comidaClicada) {
 
     comidaEscolhida = botao1.innerHTML;
 
+    const comidaTitle = botao1.querySelector('.tituloComida');
+    const comidaPrice = botao1.querySelector('.precoComida');
+
+    titleComida = comidaTitle.innerHTML;
+    priceComida = comidaPrice.innerHTML;
+    console.log(titleComida)
     verificarSelecoes();
 
 }
 
 let bebidaEscolhida;
-
+let titleBebida;
+let priceBebida;
 function selecionarBebida(bebidaClicada) {
 
     const bebidaSelecionadaAntes = document.querySelector('.chosen2');
@@ -36,11 +44,18 @@ function selecionarBebida(bebidaClicada) {
 
     bebidaEscolhida = botao2.innerHTML;
 
+    const bebidaTitle = botao2.querySelector('.tituloBebida');
+    const bebidaPrice = botao2.querySelector('.precoBebida');
+
+    titleBebida = bebidaTitle.innerHTML;
+    priceBebida = bebidaPrice.innerHTML;
+
     verificarSelecoes();
 }
 
 let sobremesaEscolhida;
-
+let titleSobremesa;
+let priceSobremesa;
 function selecionarSobremesa(sobremesaClicada) {
 
     const sobremesaSelecionadaAntes = document.querySelector('.chosen3');
@@ -55,6 +70,12 @@ function selecionarSobremesa(sobremesaClicada) {
     botao3.classList.add('chosen3');
 
     sobremesaEscolhida = botao3.innerHTML;
+
+    const sobremesaTitle = botao3.querySelector('.tituloSobremesa');
+    const sobremesaPrice = botao3.querySelector('.precosobremesa');
+
+    titleSobremesa = sobremesaTitle.innerHTML;
+    priceSobremesa = sobremesaPrice.innerHTML;
 
     verificarSelecoes();
 
@@ -75,7 +96,29 @@ function verificarSelecoes() {
 
             }
         }
-
     }
+}
+
+function fecharPedidoWhatsApp() {
+
+    priceComida = priceComida.replace('R$ ', '');
+    priceBebida = priceBebida.replace('R$ ', '');
+    priceSobremesa = priceSobremesa.replace('R$ ', '');
+
+    priceComida = priceComida.replace(',', '.');
+    priceBebida = priceBebida.replace(',', '.');
+    priceSobremesa = priceSobremesa.replace(',', '.');
+
+    precoTotal = Number(priceComida) + Number(priceBebida) + Number(priceSobremesa);
+
+    let msg = `Olá, gostaria de fazer o pedido:
+     - Prato: ${titleComida}
+     - Bebida: ${titleBebida}
+     - Sobremesa: ${titleSobremesa}
+     Total: R$ ${precoTotal.toFixed(2)}`;
+
+    const mensagemWpp = encodeURIComponent(msg);
+
+    window.open(`http://wa.me/32991368445?text=${mensagemWpp}`);
 
 }
