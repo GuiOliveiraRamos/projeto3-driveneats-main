@@ -92,7 +92,7 @@ function verificarSelecoes() {
                 const fecharPedido = document.querySelector('.finishing');
                 fecharPedido.classList.add('order');
                 const finalizar = document.querySelector('.finishing');
-                finalizar.innerHTML = "Fazer Pedido";
+                finalizar.innerHTML = "Fechar Pedido";
 
             }
         }
