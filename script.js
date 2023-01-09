@@ -109,7 +109,7 @@ function fecharPedidoWhatsApp() {
     priceBebida = priceBebida.replace(',', '.');
     priceSobremesa = priceSobremesa.replace(',', '.');
 
-    precoTotal = Number(priceComida) + Number(priceBebida) + Number(priceSobremesa);
+    let precoTotal = Number(priceComida) + Number(priceBebida) + Number(priceSobremesa);
 
     let msg = `Olá, gostaria de fazer o pedido:
      - Prato: ${titleComida}
