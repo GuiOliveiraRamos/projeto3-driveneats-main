@@ -93,7 +93,7 @@ function verificarSelecoes() {
                 fecharPedido.classList.add('order');
                 const finalizar = document.querySelector('.finishing');
                 finalizar.innerHTML = "Fechar Pedido";
-
+                document.querySelector(".finishing").removeAttribute("disabled");
             }
         }
     }
